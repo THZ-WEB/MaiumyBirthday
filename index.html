@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convite de Aniversário da Maiumy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="convite">
+    <img src="maiumy_character.png" alt="Maiumy" class="character-img">
+    <h1>É o meu aniversário!</h1>
+    <p class="subtitle">E você é meu convidado especial para comemorar junto comigo!</p>
+    
+    <div id="countdown" class="countdown">
+        <div class="time-block">
+            <span id="days">00</span>
+            <small>Dias</small>
+        </div>
+        <div class="time-block">
+            <span id="hours">00</span>
+            <small>Horas</small>
+        </div>
+        <div class="time-block">
+            <span id="minutes">00</span>
+            <small>Minutos</small>
+        </div>
+        <div class="time-block">
+            <span id="seconds">00</span>
+            <small>Segundos</small>
+        </div>
+    </div>
+    
+    <div class="detalhes">
+        <div class="detalhe-item">
+            <img src="cake_icon.png" alt="Bolo" class="icon">
+            <span>Comemorando os 8 anos da <strong>Maiumy</strong>!</span>
+        </div>
+        <div class="detalhe-item">
+            <span>📅 <strong>Data:</strong> 20 de Julho de 2024</span>
+        </div>
+        <div class="detalhe-item">
+            <span>🕓 <strong>Horário:</strong> 16h00</span>
+        </div>
+        <div class="detalhe-item">
+             <span>📍 <strong>Local:</strong> 
+                <a class="localizacao" href="https://www.google.com/maps?q=Rua+das+Flores,+123,+Bairro+Jardim+Sol" target="_blank">
+                    Salão de Festas, Rua das Flores, 123
+                </a>
+            </span>
+        </div>
+    </div>
+
+    <p>Sua presença é o meu maior presente!</p>
+
+    <!-- Botão de confirmação por WhatsApp -->
+    <div class="botao-container">
+      <a class="botao" href="https://wa.me/+553899120679?text=Oi%2C+Maiumy%21+Confirmo+minha+presen%C3%A7a+no+seu+anivers%C3%A1rio%21+%F0%9F%8E%89%F0%9F%8E%82" target="_blank">
+        Confirmar Presença
+      </a>
+    </div>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "canvas-confetti": "https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.module.mjs"
+    }
+  }
+  </script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

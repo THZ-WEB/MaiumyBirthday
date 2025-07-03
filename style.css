@@ -1,0 +1,233 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff0f5; /* Light pastel pink */
+  color: #555;
+  text-align: center;
+  padding: 20px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.convite {
+  background: white;
+  border-radius: 20px;
+  padding: 20px 30px 40px;
+  max-width: 450px;
+  margin: 40px auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 10;
+  animation: popIn 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+  opacity: 0;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.character-img {
+    width: 150px;
+    margin-top: -90px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: #e91e63; /* Hot pink */
+  font-size: 2.8rem;
+  margin: 0;
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.7);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #777;
+  margin: 5px 0 25px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+    background: #fce4ec; /* Lighter pink */
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.time-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    min-width: 60px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.time-block span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #d81b60; /* Darker pink */
+    line-height: 1;
+}
+
+.time-block small {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.detalhes {
+  font-size: 1.1rem;
+  margin: 20px 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.detalhe-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+}
+
+.detalhe-item strong {
+    color: #333;
+}
+
+.localizacao {
+  color: #e91e63;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.localizacao:hover {
+  color: #ad1457;
+  text-decoration: underline;
+}
+
+.botao-container {
+    margin-top: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.botao-container::before,
+.botao-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url('sparkle_icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: sparkle-anim 1.8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.botao-container::before {
+    top: -10px;
+    left: -20px;
+    transform: rotate(-15deg);
+}
+
+.botao-container::after {
+    bottom: -10px;
+    right: -20px;
+    animation-delay: -0.9s;
+    transform: rotate(15deg);
+}
+
+@keyframes sparkle-anim {
+    0%, 100% {
+        transform: scale(1) rotate(-15deg);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.4) rotate(10deg);
+        opacity: 1;
+    }
+}
+
+.botao {
+  display: inline-block;
+  padding: 15px 35px;
+  background: linear-gradient(45deg, #ff4081, #e91e63);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+.botao:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.5);
+}
+
+.botao:active {
+  transform: translateY(0);
+}
+
+.countdown h2 {
+    color: #e91e63;
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    margin: 0;
+    animation: popIn 0.5s ease;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .convite {
+        padding: 15px 20px 30px;
+        margin: 20px auto;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+    .character-img {
+        width: 120px;
+        margin-top: -75px;
+    }
+}
